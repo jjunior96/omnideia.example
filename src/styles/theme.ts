@@ -3,7 +3,7 @@ export default {
     sidebar: '6rem'
   },
   grid: {
-    container: '130rem',
+    container: '120rem',
     gutter: '3.2rem'
   },
   border: {
