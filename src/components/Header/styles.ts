@@ -16,7 +16,7 @@ export const Content = styled.div`
   ${({ theme }) => css`
     width: 100%;
     height: 100%;
-    max-width: 1200px;
+    max-width: ${theme.grid.container};
 
     display: flex;
     align-items: center;
