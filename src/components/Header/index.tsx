@@ -1,26 +1,34 @@
-import { useCallback, useState } from 'react';
-import { GiHamburgerMenu } from 'react-icons/gi';
+import { GiHamburgerMenu as HamburgerMenu } from 'react-icons/gi';
 
-import Logo from 'components/Logo';
-
-import * as S from './styles';
+import { Flex, Text, Icon } from '@chakra-ui/react';
 
 const Header = () => {
-  const [openMenu, setOpenMenu] = useState(false);
-
-  const handleOpenMenu = useCallback(() => {
-    setOpenMenu(!openMenu);
-
-    console.log(openMenu);
-  }, [openMenu]);
-
   return (
-    <S.Container>
-      <S.Content>
-        <Logo />
-        <GiHamburgerMenu size={26} onClick={handleOpenMenu} />
-      </S.Content>
-    </S.Container>
+    <Flex
+      width="100vw"
+      height="14"
+      alignItems="center"
+      justifyContent="center"
+      backgroundColor="orange.300"
+      zIndex="10"
+      position="fixed"
+    >
+      <Flex
+        width="100%"
+        maxWidth="1200px"
+        justifyContent="space-between"
+        alignItems="center"
+      >
+        <Text fontSize="2xl" fontWeight="bold" color="white">
+          Logo
+        </Text>
+
+        <Text fontSize="2xl" fontWeight="bold" color="white">
+          {/* Menu */}
+          <Icon as={HamburgerMenu} />
+        </Text>
+      </Flex>
+    </Flex>
   );
 };
 

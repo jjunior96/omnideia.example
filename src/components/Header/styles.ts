@@ -4,9 +4,10 @@ export const Container = styled.header`
   ${({ theme }) => css`
     width: 100%;
     height: ${theme.contentHeight.sidebar};
-    /* background-color: ${theme.colors.primary}; */
+
     backdrop-filter: blur(5px);
     box-shadow: ${theme.box.shadow};
+
     position: fixed;
     top: 0;
   `}
@@ -16,7 +17,7 @@ export const Content = styled.div`
   ${({ theme }) => css`
     width: 100%;
     height: 100%;
-    max-width: 1200px;
+    max-width: ${theme.grid.container};
 
     display: flex;
     align-items: center;
@@ -25,7 +26,7 @@ export const Content = styled.div`
     padding: 0 2rem;
 
     svg {
-      color: ${theme.colors.primary};
+      color: ${theme.colors.yellow[300]};
     }
   `}
 `;
