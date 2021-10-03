@@ -1,15 +1,15 @@
+import { Flex } from '@chakra-ui/react';
+
 import Header from 'components/Header';
 import Logo from 'components/Logo';
 
-import * as S from './styles';
-
-const Dashboard: React.FC = () => {
+const Dashboard = () => {
   return (
-    <S.Container>
+    <Flex width="100vw" height="100vh">
       <Header />
       {/* <img src="/img/bg.png" alt="" /> */}
       <Logo />
-    </S.Container>
+    </Flex>
   );
 };
 
