@@ -1,12 +1,10 @@
-import Image from 'next/image';
-
-import * as S from './styles';
+import { Image, Flex } from '@chakra-ui/react';
 
 const Logo = () => {
   return (
-    <S.Container>
-      <Image src="/assets/logo.svg" width={100} height={100} />
-    </S.Container>
+    <Flex>
+      <Image src="/img/bg.png" alt="Logo" />
+    </Flex>
   );
 };
 
